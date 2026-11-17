@@ -5,6 +5,10 @@
  * Offline regression checks. Run: php tests/capabilities.php
  */
 
+if (PHP_SAPI !== 'cli') {
+  exit;
+}
+
 define('REQUEST_TIME', time());
 define('WATCHDOG_WARNING', 4);
 define('WATCHDOG_ERROR', 3);
